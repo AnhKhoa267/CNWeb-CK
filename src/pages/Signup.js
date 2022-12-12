@@ -71,31 +71,31 @@ const Signup = () => {
                 {
                     loading? (<Col lg='12' className='text-center'><h5 className='fw-bold'>Loading.....</h5></Col>) :
                 (<Col lg='6' className='m-auto text-center'>
-                    <h3 className='fw-bold mb-3'>Signup</h3>
+                    <h3 className='fw-bold mb-3'>Đăng ký</h3>
 
                     <Form className='auth__form' onSubmit={signup}>
 
                         <FormGroup className='form__gruop'>
-                            <input type="text" placeholder='UserName' 
+                            <input type="text" placeholder='Tên đăng nhập ...' 
                             value={username} onChange={e=>setUsername(e.target.value)}></input>
                         </FormGroup>
 
                         <FormGroup className='form__gruop'>
-                            <input type="email" placeholder='Enter your email' 
+                            <input type="email" placeholder='Email ...' 
                             value={email} onChange={e=>setEmail(e.target.value)}></input>
                         </FormGroup>
 
                         <FormGroup className='form__gruop'>
-                            <input type="password" placeholder='Enter your password'
+                            <input type="password" placeholder='Mật khẩu ...'
                             value={password} onChange={e=>setPassword(e.target.value)}></input>
                         </FormGroup>
 
-                        <FormGroup className='form__gruop'>
+                        {/* <FormGroup className='form__gruop'>
                             <input type="file"  onChange={e=>setFile(e.target.files[0])}></input>
-                        </FormGroup>
+                        </FormGroup> */}
 
-                        <button type='submit' className='buy__bt auth__btn'>Create</button>
-                        <p>Already have an account?<Link to='/login'>Login</Link></p>
+                        <button type='submit' className='buy__bt auth__btn'>Tạo tài khoản</button>
+                        <p>Bạn đã có tài khoản?<Link to='/login'>Đăng nhập</Link></p>
                     </Form>
                 </Col>)
                 }

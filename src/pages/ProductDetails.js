@@ -86,7 +86,7 @@ const ProductDetails = () => {
 
                                 <p className='mt-3'>{shortDesc}</p>
 
-                                <motion.button whileTap={{scale:1.2}} className='buy__btn' onClick={addToCart}>Add to card</motion.button>
+                                <motion.button whileTap={{scale:1.2}} className='buy__btn' onClick={addToCart}>Thêm vào giỏ hàng</motion.button>
                             </div>
                         </Col>
                     </Row>
@@ -99,10 +99,10 @@ const ProductDetails = () => {
                         <Col lg='12'>
                             <div className='tab__wrapper d-flex align-items-center gap-5'>
                                 <h6 className={`${tab==='desc' ? "active__tab" : ""}`} 
-                                    onClick={() => setTab('desc')}>Description
+                                    onClick={() => setTab('desc')}>Chi tiết
                                 </h6>
                                 <h6 className={`${tab==='rev' ? "active__tab" : ""}`} 
-                                    onClick={() => setTab('rev')}>Reviews ({reviews.length})
+                                    onClick={() => setTab('rev')}>Đánh giá ({reviews.length})
                                 </h6>
                             </div>
                             
@@ -151,7 +151,7 @@ const ProductDetails = () => {
                         </Col>
 
                         <Col lg='12' className='mt-5'>
-                            <h2 className='related__title'>You might also like</h2>
+                            <h2 className='related__title'>Sản phẩm tương tự</h2>
                         </Col>
 
                         <ProductsList data={relatedProducts} />

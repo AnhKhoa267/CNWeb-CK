@@ -1,7 +1,7 @@
 .footer {
     padding-top: 60px;
     padding-bottom: 30px;
-    background: var(--primary-color);
+    background:black;
 }
 
 .footer__text {
@@ -41,4 +41,9 @@
     font-size: 0.9rem;
     margin-top: 50px;
     text-align: center;
+    border-top: 1px solid rgb(64, 64, 64);
+    padding-top: 10px;
+}
+.footer-item{
+    margin-right:110px;
 }

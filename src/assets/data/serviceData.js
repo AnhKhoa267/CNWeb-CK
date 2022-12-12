@@ -1,27 +1,27 @@
 const serviceData = [
   {
-    icon: "ri-truck-line",
-    title: "Free Shipping",
-    subtitle: "Lorem ipsum dolor sit amet.",
-    bg: "#fdefe6",
+    icon: "material-symbols:alarm-on",
+    title: "Màn hình Always ON",
+    subtitle: "Xem nhanh thời gian và thông báo trên màn hình",
+    bg: "black",
   },
   {
-    icon: "ri-refresh-line",
-    title: "Easy Returns",
-    subtitle: "Lorem ipsum dolor sit amet.",
-    bg: "#ceebe9",
+    icon: "material-symbols:alarm-on",
+    title: "Lấy nét tự động",
+    subtitle: "Camera selfie đã được lấy nét tự động",
+    bg: "black",
   },
   {
-    icon: "ri-secure-payment-line",
-    title: "Secure Payment",
-    subtitle: "Lorem ipsum dolor sit amet.",
-    bg: "#e2f2b2",
+    icon: "material-symbols:alarm-on",
+    title: "Action mode",
+    subtitle: "Chống rung quang học , đảm bảo ổn định",
+    bg: "black",
   },
   {
-    icon: "ri-exchange-dollar-line",
-    title: " Back Guarantee",
-    subtitle: "Lorem ipsum dolor sit amet.",
-    bg: "#d6e5fb",
+    icon: "material-symbols:alarm-on",
+    title: "Phát hiện tai nạn",
+    subtitle: "Bảo vệ sức khỏe và an toàn người dùng",
+    bg: "black",
   },
 ];
 

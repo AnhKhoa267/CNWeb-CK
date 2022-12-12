@@ -51,7 +51,7 @@ const Shop = () => {
 
   return (
   <Helmet title="Shop">
-    <CommonSection title="Product"/>
+    <CommonSection title="SẢN PHẨM"/>
 
     <section>
         <Container>
@@ -59,12 +59,12 @@ const Shop = () => {
                 <Col lg='3' md='6'>
                     <div className="filter__widget">
                         <select onChange={handleFilter}>
-                            <option>Filter By Category</option>
+                            <option>Lọc theo tên</option>
                             <option value="sofa">Sofa</option>
                             <option value="mobile">Mobile</option>
                             <option value="chair">Chair</option>
-                            <option value="watch">Watch</option>
-                            <option value="wireless">Wireless</option>
+                            <option value="watch">Đồng hồ</option>
+                            <option value="wireless">Tai nghe</option>
                         </select>
                     </div>
                 </Col>
@@ -72,14 +72,14 @@ const Shop = () => {
                     <div className="filter__widget">
                         <select>
                             <option>Sort By</option>
-                            <option value="ascending">Ascending</option>
-                            <option value="descending">Descending</option>
+                            <option value="ascending">Tăng dần</option>
+                            <option value="descending">Giảm dần</option>
                         </select>
                     </div>
                 </Col>
                 <Col lg='6' md='12'>
                     <div className="search__box">
-                        <input type='text' placeholder="Search..." onChange={handleSearch }/>
+                        <input type='text' placeholder="Tìm kiếm..." onChange={handleSearch }/>
                         <span>
                             <i className="ri-search-line"/>
                         </span>
@@ -93,7 +93,7 @@ const Shop = () => {
         <Container>
             <Row>
                 {
-                    productsData.length === 0? (<h1 className='text-center fs-4'>No products are found</h1>)
+                    productsData.length === 0? (<h1 className='text-center fs-4'>Không tìm thấy sản phẩm</h1>)
                     : (<ProductList data = {productsData}/>
                 )}
             </Row>

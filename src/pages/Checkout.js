@@ -11,56 +11,44 @@ const Checkout = () => {
     const totalAmount =  useSelector(state=>state.cart.totalAmount);
   return (
     <Helmel title="Checkout">
-      <CommonSection title='Checkout'/>
+      <CommonSection title='THANH TOÁN'/>
       <section>
         <Container>
           <Row>
             <Col lg='8'>
-              <h6 className='mb-4 fw-bold'>Billing Information</h6>
+              <h6 className='mb-4 fw-bold'>Thông tin thanh toán</h6>
               <Form className='billing__form'>
                 <FormGroup className='form__goup'>
-                  <input type='text' placeholder="Enter your name"/>
+                  <input type='text' placeholder="Họ và tên...."/>
                 </FormGroup>
 
                 <FormGroup className='form__goup'>
-                  <input type='email' placeholder="Enter your email"/>
+                  <input type='email' placeholder="Địa chỉ email...."/>
                 </FormGroup>
 
                 <FormGroup className='form__goup'>
-                  <input type='number' placeholder="Number"/>
+                  <input type='number' placeholder="Số điện thoại...."/>
                 </FormGroup>
 
                 <FormGroup className='form__goup'>
-                  <input type='text' placeholder="Address"/>
-                </FormGroup>
-
-                <FormGroup className='form__goup'>
-                  <input type='text' placeholder="City"/>
-                </FormGroup>
-
-                <FormGroup className='form__goup'>
-                  <input type='text' placeholder="Postal Code"/>
-                </FormGroup>
-
-                <FormGroup className='form__goup'>
-                  <input type='text' placeholder="Country"/>
+                  <input type='text' placeholder="Địa chỉ...."/>
                 </FormGroup>
               </Form>
             </Col>
 
             <Col lg='4'>
                 <div className='checkout__cart'>
-                    <h6>Total Qty: <span>{totalQty} items</span></h6>
-                    <h6>Subtotal: <span>${totalAmount}</span></h6>
+                    <h6>Tổng số lượng: <span>{totalQty} sản phẩm</span></h6>
+                    <h6>Tổng cộng: <span>${totalAmount}</span></h6>
                     <h6>
                         <span>
-                            Shipping: <br/> free shipping
+                            Giao hàng: <br/> Miễn phí giao hàng
                         </span>  
                         <span>$0</span>
                     </h6>
-                    <h4>Total Cost: <span>${totalAmount}</span></h4>
+                    <h4>Tổng thanh toán: <span>${totalAmount}</span></h4>
                     <button className='buy__btn auth__btn w-100'>
-                    Place an order
+                    Đặt hàng
                     </button>
                 </div>
                

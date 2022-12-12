@@ -33,6 +33,7 @@ const products = [
     id: "01",
     productName: "Stone and Beam Westview ",
     imgUrl: productImg01,
+    seller : "1",
     category: "sofa",
     price: 193,
     shortDesc:

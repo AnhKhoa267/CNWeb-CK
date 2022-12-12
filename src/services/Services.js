@@ -12,6 +12,7 @@ const Services = () => {
                 serviceData.map((item,index)=>(
                     <Col lg='3' md='4' key={index}>
                         <motion.div whileHover={{scale:1.1}} className='service__item' style={{background: `${item.bg}` }}>
+                            
                             <div>
                             <h3>{item.title}</h3>
                             <p>{item.subtitle}</p>

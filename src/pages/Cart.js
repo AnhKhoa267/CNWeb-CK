@@ -17,7 +17,7 @@ const Cart = () => {
 
   return (
   <Helmet title='Cart'>
-    <CommonSection title='Shopping Cart'/>
+    <CommonSection title='GIỎ HÀNG'/>
     <section>
       <Container>
         <Row>
@@ -25,15 +25,15 @@ const Cart = () => {
           <Col lg='9'>
             {
               cartItems.length===0 ? 
-              (<h2 className='fs-4 text-center'>No item added to the cart</h2> ) 
+              (<h2 className='fs-4 text-center'>Không có sản phẩm nào được thêm vào giỏ hàng</h2> ) 
               :( <table className='table bordered'>
               <thead>
                 <tr>
-                  <th>Image</th>
-                  <th>Title</th>
-                  <th>Price</th>
-                  <th>Qty</th>
-                  <th>Delete</th>
+                  <th>Hình ảnh</th>
+                  <th>Tên sản phẩm</th>
+                  <th>Giá</th>
+                  <th>Số lượng</th>
+                  <th>Xóa</th>
                 </tr>
               </thead>
 
@@ -52,17 +52,17 @@ const Cart = () => {
             
           </Col>
 
-          <Col lg='3'>
+          <Col className='gio_hang' lg='3'>
             <div>
-              <h6 className='d-flex align-items-center justify-content-between'>Subtotal
+              <h6 className='d-flex align-items-center justify-content-between'>TỔNG CỘNG
               <span className='fs-4 fw-bold'>${totalAmount}</span></h6>
               
             </div>
-            <p className='fs-6 mt-2'>taxes and shopping will calculate in checkout</p>
+            <p className='fs-6 mt-2'>Thuế sẽ được tính vào khi thanh toán</p>
    
             <div>
-            <button className='buy__btn w-100 '><Link to='/checkout'>Checkout</Link></button>
-            <button className='buy__btn w-100 mt-3'><Link to='/shop'>Continue Shopping</Link></button>
+            <button className='buy__btn w-100 '><Link to='/checkout'>Thanh toán</Link></button>
+            <button className='buy__btn w-100 mt-3'><Link to='/shop'>Tiếp tục mua sắm</Link></button>
             </div>
             
           </Col>

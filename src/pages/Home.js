@@ -14,6 +14,7 @@ import Clock from '../components/UI/Clock';
 
 
 const Home = () => {
+  const [bestSeller, setbestSeller] = useState([]);
   const [trendingProducts, setTrendingProducts] = useState([]);
   const [bestSalesProducts, setBestSalesProducts] = useState([]);
   const [mobileProducts, setMobileProducts] = useState([]);
@@ -22,6 +23,9 @@ const Home = () => {
  
 
   useEffect(()=>{
+    const filteredBestseller = products.filter(
+      (item) => item.seller==="1"
+    );
     const filteredTrendingProducts = products.filter(
       (item) => item.category==="chair"
     );
@@ -38,6 +42,7 @@ const Home = () => {
       (item) => item.category==="watch"
     );
 
+    setbestSeller(filteredBestseller);
     setTrendingProducts(filteredTrendingProducts);
     setBestSalesProducts(filteredBestSalesProducts);
     setMobileProducts(filteredMobileProducts);
@@ -53,13 +58,10 @@ const Home = () => {
           <Row>
             <Col lg="6" md="6">
               <div className="hero__content">
-                <p className="hero__subtitle">Trending product in {year}</p>
-                <h2>Mke your interior more Minimalistic Modern </h2>
-                <p>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-                  CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-                  CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-                </p>
-                <motion.button whileTap={{scale: 1.2}} className="buy__btn"><Link to='shop'> Shop Now</Link></motion.button>
+                <p className="hero__subtitle">Sản phẩm mới trong năm {year}</p>
+                <h3>Iphone 14</h3>
+                <h2>TO VÀ TO HƠN NỮA.</h2>
+                <motion.button whileTap={{scale: 1.2}} className="buy__btn"><Link to='shop'> MUA NGAY</Link></motion.button>
               </div>
             </Col>
 
@@ -74,40 +76,49 @@ const Home = () => {
       </section>
 
       <Services/>
-      < section className='trending__products'>
-        <Container>
-          <Row>
-            <Col lg='12' className='text-center'>
-              <h2 className='section__title'>Trending Pro</h2>
-            </Col>
-            <ProductsList data={trendingProducts}/>
-          </Row>
-        </Container>
-      </section>
-
-      <section className='best_sales'>
-        <Container>
-        <Row>
-            <Col lg='12' className='text-center'>
-              <h2 className='section__title'>Trending Pro</h2>
-            </Col>
-            <ProductsList data={bestSalesProducts}/>
-          </Row>  
-        </Container>
-      </section>
 
       <section className='timer__count'>
         <Container>
           <Row>
             <Col lg='6' md='12' className='count__down-col'>
               <div className='clock__top-content'>
-                <h4 className='text-white fs-6 mb-2'>Limited Offers</h4>
-                <h3 className='text-white fs-5 mb-3'>Quality Armchair</h3>
+                <h3 className='fs-5 mb-3'>iPhone</h3>
+                <h2>Năng lượng nhiều hơn.</h2>
+                <h2>Giá trị nhiều hơn.</h2>
+              </div>
+              <Clock/>
+            </Col>
+
+            <Col lg='6' md='6' className='text-end counter__img'>
+            <iframe width="942" height="530" src="https://www.youtube.com/embed/tks8vUwh3wM?autoplay=1&mute=1" title="iPhone 14 - TRAILER" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      < section className='trending__products'>
+        <Container>
+          <Row>
+            <Col lg='12' className='text-center'>
+              <h2 className='section__title'>Best Seller</h2>
+            </Col>
+            <ProductsList data={bestSeller}/>
+          </Row>
+        </Container>
+      </section>
+
+      <section className='timer__count--limit'>
+        <Container>
+          <Row>
+            <Col lg='6' md='12' className='count__down-col'>
+              <div className='clock__top-content'>
+                <h4 className='fs-6 mb-2'>Limited</h4>
+                <h3 className='mb-3'>Iphone 14 PRO. Tím trà.</h3>
               </div>
               <Clock/>
 
               <motion.button whileTap={{scale: 1.2}} className='buy__btn store__btn'>
-                <Link to='/shop'>Visit Store</Link>
+                <Link to='/shop'>ĐẶT NGAY</Link>
               </motion.button>
             </Col>
 
@@ -118,15 +129,13 @@ const Home = () => {
         </Container>
       </section>
 
-      <section className='new__arrivals'>
+      <section className="popular__category">
         <Container>
           <Row>
-            <Col lg='12' className='text-center mb-5'>
-              <h2 className='section__title'>New Arrivals</h2>
+            <Col lg="12" className="mb-5">
+              <h2 className="section__title">iPhone </h2>
             </Col>
             <ProductsList data={mobileProducts}/>
-            <ProductsList data={wirelessProducts}/>
-
           </Row>
         </Container>
       </section>
@@ -134,8 +143,41 @@ const Home = () => {
       <section className="popular__category">
         <Container>
           <Row>
-            <Col lg="12" className="text-center mb-5">
-              <h2 className="section__title">Popular in Category</h2>
+            <Col lg="12" className="mb-5">
+              <h2 className="section__title">iPad</h2>
+            </Col>
+            <ProductsList data={mobileProducts}/>
+          </Row>
+        </Container>
+      </section>
+
+      <section className="popular__category">
+        <Container>
+          <Row>
+            <Col lg="12" className="mb-5">
+              <h2 className="section__title">MacBook</h2>
+            </Col>
+            <ProductsList data={bestSalesProducts}/>
+          </Row>
+        </Container>
+      </section>
+
+      <section className="popular__category">
+        <Container>
+          <Row>
+            <Col lg="12" className="mb-5">
+              <h2 className="section__title">Tai nghe</h2>
+            </Col>
+            <ProductsList data={wirelessProducts}/>
+          </Row>
+        </Container>
+      </section>
+
+      <section className="popular__category">
+        <Container>
+          <Row>
+            <Col lg="12" className="mb-5">
+              <h2 className="section__title">Đồng hồ</h2>
             </Col>
             <ProductsList data={popularProducts}/>
           </Row>

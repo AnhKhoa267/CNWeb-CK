@@ -9,3 +9,13 @@
 .td{
     color: var(--primary-color);
 }
+.gio_hang{
+    border: black 1px solid;
+    padding: 30px;
+    border-radius: 10px;
+}
+.gio_hang h6{
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    font-weight: 700;
+}

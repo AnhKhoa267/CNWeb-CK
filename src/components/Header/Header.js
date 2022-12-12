@@ -16,15 +16,15 @@ import { toast } from 'react-toastify';
 const nav__link = [
   {
     path:'home',
-    display: 'Home'
+    display: 'Trang Chủ'
   },
   {
     path:'shop',
-    display: 'Shop'
+    display: 'Sản Phẩm'
   },
   {
     path:'cart',
-    display: 'Cart'
+    display: 'Giỏ Hàng'
   },
   
 ];
@@ -80,7 +80,7 @@ const Header = () => {
             <div className="logo">
               <img src={logo} alt="logo"/>
               <div>
-                <h1>Multimart</h1>
+                <h1>WinX Store</h1>
                 
               </div>
             </div>
@@ -110,13 +110,14 @@ const Header = () => {
 
               <div className='profile__actions' ref={profileActionRef} onClick={toggleProfileActions}>
                 {
-                  currentUser ? (<span onClick={logout}>Logout</span>) : (
+                  currentUser ? (<span className='logout' onClick={logout}>Đăng xuất</span>) : (
                   <div className='d-flex align-items-center justify-content-center'>
-                    <Link to='/signup'>Signup</Link> 
-                    <Link to='/login'>Login</Link> 
+                    <Link  to='/signup'><p className='signup'>Đăng ký</p></Link> 
+                    <Link  to='/login'><p className='login'>Đăng nhập</p></Link> 
                   </div>)
                 }
               </div>
+
               <div className="mobile__menu">
                 <span onClick={menuToggle} ><i className="ri-menu-line" /></span>
               </div>

@@ -38,7 +38,7 @@ const Login = () => {
             <Row>
                 {
                     loading ? (<Col lg='12' className='text-center'><h5 className='fw-bold'>Loading.....</h5></Col>) : (<Col lg='6' className='m-auto text-center'>
-                    <h3 className='fw-bold mb-3'>Login</h3>
+                    <h3 className='fw-bold mb-3'>Đăng nhập</h3>
 
                     <Form className='auth__form' onSubmit={signIn}>
 
@@ -52,8 +52,8 @@ const Login = () => {
                             value={password} onChange={e=>setPassword(e.target.value)}></input>
                         </FormGroup>
 
-                        <button type='submit' className='buy__bt auth__btn'>Login</button>
-                        <p>Don't have an account?<Link to='/signup'>Create an ccount</Link></p>
+                        <button type='submit' className='buy__bt auth__btn'>Đăng nhập</button>
+                        <p>Bạn chưa có tài khoản<Link to='/signup'>Đăng ký</Link></p>
                     </Form>
                 </Col>)
                 }

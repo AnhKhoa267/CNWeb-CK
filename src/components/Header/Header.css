@@ -39,6 +39,9 @@
     align-items: center;
     column-gap: 1.2 rem;
 }
+.nav__icons *{
+    margin:0 5px;
+}
 .nav__icons span i{
     font-size: 1.3 rem ;
     color: var(--primary-color);
@@ -89,9 +92,38 @@
     box-shadow: 3px 3px 8px -3px #ddd;
     background: #fff;
 }
-
-.show__profileActions {
-    display: block;
+.profile__actions .signup{
+    background-color: black;
+    color:white;
+    display: inline;
+    padding: 7px 15px;
+    font-size: 12px;
+    border-radius: 10px;
+}
+.profile__actions .login{
+    background-color: black;
+    color:white;
+    display: inline;
+    padding: 7px 15px;
+    font-size: 12px;
+    border-radius: 10px;
+}
+.profile__actions .logout{
+    background-color: black;
+    color:white;
+    display: inline;
+    padding: 7px 15px;
+    font-size: 12px;
+    border-radius: 10px;
+}
+.profile__actions .signup:hover{
+    color:rgb(130, 192, 239);
+}
+.profile__actions .logout:hover{
+    color:rgb(130, 192, 239);
+}
+.profile__actions .login:hover{
+    color:rgb(130, 192, 239);
 }
 
 @media only screen and (max-width: 768px) {
