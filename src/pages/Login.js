@@ -35,7 +35,7 @@ const Login = () => {
   return <Helmel title='Login'>
     <section>
         <Container>
-            <Row>
+            <Row className='bar'>
                 {
                     loading ? (<Col lg='12' className='text-center'><h5 className='fw-bold'>Loading.....</h5></Col>) : (<Col lg='6' className='m-auto text-center'>
                     <h3 className='fw-bold mb-3'>Đăng nhập</h3>

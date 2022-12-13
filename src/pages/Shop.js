@@ -59,19 +59,19 @@ const Shop = () => {
                 <Col lg='3' md='6'>
                     <div className="filter__widget">
                         <select onChange={handleFilter}>
-                            <option>Lọc theo tên</option>
-                            <option value="sofa">Sofa</option>
-                            <option value="mobile">Mobile</option>
-                            <option value="chair">Chair</option>
+                            <option>Lọc theo loại </option>
+                            <option value="mobile">iPhone</option>
+                            <option value="sofa">iPad</option>
+                            <option value="chair">MacBook</option>
                             <option value="watch">Đồng hồ</option>
                             <option value="wireless">Tai nghe</option>
                         </select>
                     </div>
                 </Col>
-                <Col lg='3' md='6' className='text-end'>
+                <Col lg='3' md='6' className='text-start'>
                     <div className="filter__widget">
                         <select>
-                            <option>Sort By</option>
+                            <option>Sắp xếp</option>
                             <option value="ascending">Tăng dần</option>
                             <option value="descending">Giảm dần</option>
                         </select>

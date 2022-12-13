@@ -57,7 +57,8 @@ const ProductDetails = () => {
 
     return ( 
         <Helmet title={productName}>
-            <CommonSection title={productName}/>
+            <section className='banner'>
+            </section>
             <section className='pt-0'>
                 <Container>
                     <Row>
@@ -76,17 +77,17 @@ const ProductDetails = () => {
                                         <span><i className='ri-star-s-fill'/></span>
                                         <span><i className='ri-star-half-s-fill'/></span>
                                     </div>
-                                    <p>(<span>{avgRating}</span> ratings)</p>
+                                    <p>(<span>{avgRating}</span> sao)</p>
                                 </div>
 
                                 <div className='d-flex align-items-center gap-5'>
-                                    <span className='product__price'>${price}</span>
-                                    <span>Category: {category.toUpperCase()}</span>
+                                    <span className='product__price'>$ {price}</span>
+                                    
                                 </div>
 
                                 <p className='mt-3'>{shortDesc}</p>
 
-                                <motion.button whileTap={{scale:1.2}} className='buy__btn' onClick={addToCart}>Thêm vào giỏ hàng</motion.button>
+                                <motion.button whileTap={{scale:1.2}} className='buy__btn' onClick={addToCart}>MUA HÀNG</motion.button>
                             </div>
                         </Col>
                     </Row>
@@ -127,9 +128,9 @@ const ProductDetails = () => {
 
                                         <div className='review__form'>
                                             <form action='' onSubmit={submitHandler}>
-                                                <h4>Leave your experience</h4>
+                                                <h4>Gửi đánh giá của bạn</h4>
                                                 <div className='form__group'>
-                                                    <input type="text" placeholder='Enter name' ref={reviewUser} required />
+                                                    <input type="text" placeholder='Tên...  ' ref={reviewUser} required />
                                                 </div>
                                                 <div className='form__group d-flex align-items-center gap-5 rating__group'>
                                                     <motion.span whileTap={{scale:1.2}} onClick={() => setRating(1)}>1<i className='ri-star-s-fill'></i></motion.span>
@@ -139,10 +140,10 @@ const ProductDetails = () => {
                                                     <motion.span whileTap={{scale:1.2}} onClick={() => setRating(5)}>5<i className='ri-star-s-fill'></i></motion.span>
                                                 </div>
                                                 <div className='form__group'>
-                                                    <textarea rows={4} type="text" placeholder='Review Message ...' ref={reviewMsg} required />
+                                                    <textarea rows={4} type="text" placeholder='Đánh giả ...' ref={reviewMsg} required />
                                                 </div>
 
-                                                <motion.button whileTap={{scale:1.2}} type='submit' className='buy__btn'>Submit</motion.button>
+                                                <motion.button whileTap={{scale:1.2}} type='submit' className='buy__btn'>Gửi</motion.button>
                                             </form>
                                         </div>
                                     </div>

@@ -16,7 +16,7 @@ const Checkout = () => {
         <Container>
           <Row>
             <Col lg='8'>
-              <h6 className='mb-4 fw-bold'>Thông tin thanh toán</h6>
+              <h6 className='mb-4 fw-bold'>Vui lòng nhập thông tin thanh toán: </h6>
               <Form className='billing__form'>
                 <FormGroup className='form__goup'>
                   <input type='text' placeholder="Họ và tên...."/>
@@ -38,15 +38,15 @@ const Checkout = () => {
 
             <Col lg='4'>
                 <div className='checkout__cart'>
-                    <h6>Tổng số lượng: <span>{totalQty} sản phẩm</span></h6>
-                    <h6>Tổng cộng: <span>${totalAmount}</span></h6>
+                    <h6><b>Tổng số lượng:</b> <span>{totalQty} sản phẩm</span></h6>
+                    <h6><b>Tổng cộng: </b><span>${totalAmount}</span></h6>
                     <h6>
                         <span>
-                            Giao hàng: <br/> Miễn phí giao hàng
+                            <b>Giao hàng:</b><br/> <span className='free'>Miễn phí giao hàng</span>
                         </span>  
                         <span>$0</span>
                     </h6>
-                    <h4>Tổng thanh toán: <span>${totalAmount}</span></h4>
+                    <h4><b>Tổng:</b> <span>${totalAmount}</span></h4>
                     <button className='buy__btn auth__btn w-100'>
                     Đặt hàng
                     </button>

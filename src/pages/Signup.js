@@ -67,7 +67,7 @@ const Signup = () => {
   return <Helmel title='Signup'>
     <section>
         <Container>
-            <Row>
+            <Row className='bar'>
                 {
                     loading? (<Col lg='12' className='text-center'><h5 className='fw-bold'>Loading.....</h5></Col>) :
                 (<Col lg='6' className='m-auto text-center'>

@@ -1,9 +1,23 @@
+.banner{
+    background: linear-gradient(rgba(105, 105, 105, 0.262), rgba(136, 135, 135, 0.262)), 
+    url("../assets/images/banner.jpg") no-repeat center center;
+    
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
 .product__details {
     margin-top: 50px;
 }
 
 .product__details h2 {
     font-size: 1.8rem;
+    padding-bottom: 10px;
+    font-weight: 700;
+    border-bottom: 1px solid rgb(151, 151, 151);
     margin-bottom: 10px;
 }
 
@@ -17,8 +31,8 @@
 }
 
 .product__price {
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 25px;
+    font-weight: 900;
 }
 
 .tab__wrapper {
@@ -86,7 +100,9 @@
 .related__title {
     font-size: 1.2rem;
     font-weight: 600;
-    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid black;
 }
 
 @media only screen and (max-width: 768px) {

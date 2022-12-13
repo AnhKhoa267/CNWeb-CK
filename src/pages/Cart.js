@@ -89,7 +89,7 @@ const Tr = ({item})=>{
   <td><motion.i 
   whileTap={{scale:1.2}}
   onClick={deleteProduct} 
-  className='ri-delete-bin-line'></motion.i>Delete</td>
+  className='ri-delete-bin-line'></motion.i></td>
 </tr>
 }
 export default Cart

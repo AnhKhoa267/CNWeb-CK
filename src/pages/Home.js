@@ -61,7 +61,7 @@ const Home = () => {
                 <p className="hero__subtitle">Sản phẩm mới trong năm {year}</p>
                 <h3>Iphone 14</h3>
                 <h2>TO VÀ TO HƠN NỮA.</h2>
-                <motion.button whileTap={{scale: 1.2}} className="buy__btn"><Link to='shop'> MUA NGAY</Link></motion.button>
+                <motion.button whileTap={{scale: 1.2}} className="buy__btn"><Link to='/shop/05'> MUA NGAY</Link></motion.button>
               </div>
             </Col>
 
@@ -118,7 +118,7 @@ const Home = () => {
               <Clock/>
 
               <motion.button whileTap={{scale: 1.2}} className='buy__btn store__btn'>
-                <Link to='/shop'>ĐẶT NGAY</Link>
+                <Link to='/shop/06'>ĐẶT NGAY</Link>
               </motion.button>
             </Col>
 
@@ -146,7 +146,7 @@ const Home = () => {
             <Col lg="12" className="mb-5">
               <h2 className="section__title">iPad</h2>
             </Col>
-            <ProductsList data={mobileProducts}/>
+            <ProductsList data={bestSalesProducts}/>
           </Row>
         </Container>
       </section>
@@ -157,7 +157,7 @@ const Home = () => {
             <Col lg="12" className="mb-5">
               <h2 className="section__title">MacBook</h2>
             </Col>
-            <ProductsList data={bestSalesProducts}/>
+            <ProductsList data={trendingProducts}/>
           </Row>
         </Container>
       </section>
