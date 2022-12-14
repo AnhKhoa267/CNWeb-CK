@@ -22,6 +22,7 @@ const AddProducts = () => {
 
     const addProduct = async(e) => {
         e.preventDefault();
+
         setLoading(true);
         //Add product to firebase
         try {
@@ -39,12 +40,12 @@ const AddProducts = () => {
                     category: enterCategory,
                     price: enterPrice,
                     imgUrl: downloadURL,
-                })
-            })
+                });
+            });
             });
             setLoading(false);
             toast.success("Product successfully added");
-            navigate("/dashboard/all-product")
+            navigate("/dashboard/all-products")
         } catch (err) {
             setLoading(false);
             toast.error("Product not added!");
@@ -90,6 +91,7 @@ const AddProducts = () => {
                                     </select>
                                 </FormGroup>
                             </div>
+                            
                             <div>
                             <FormGroup className='form__group'>
                                 <span>Product Image</span>

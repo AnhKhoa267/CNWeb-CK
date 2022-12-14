@@ -35,7 +35,7 @@ const AdminNav = () => {
                     <Container>
                         <div className='admin__nav-wrapper-top'>
                             <div className='logo'>
-                                <h2>KHKShop</h2>
+                                <h2>WinX</h2>
                             </div>
 
                             <div className='search__box'>
@@ -46,6 +46,7 @@ const AdminNav = () => {
                             <div className='admin__nav-top-right'>
                                 <span><i className='ri-notification-3-line'></i></span>
                                 <span><i className='ri-settings-2-line'></i></span>
+                                <img src={ currentUser && currentUser.photoURL} alt=""/>
                             </div>
                         </div>
                     </Container>

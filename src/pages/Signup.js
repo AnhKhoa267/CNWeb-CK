@@ -90,9 +90,9 @@ const Signup = () => {
                             value={password} onChange={e=>setPassword(e.target.value)}></input>
                         </FormGroup>
 
-                        {/* <FormGroup className='form__gruop'>
+                        <FormGroup className='form__gruop'>
                             <input type="file"  onChange={e=>setFile(e.target.files[0])}></input>
-                        </FormGroup> */}
+                        </FormGroup>
 
                         <button type='submit' className='buy__bt auth__btn'>Tạo tài khoản</button>
                         <p>Bạn đã có tài khoản?<Link to='/login'>Đăng nhập</Link></p>
