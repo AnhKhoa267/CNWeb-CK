@@ -21,15 +21,15 @@ const AllProducts = () => {
                         <table className='table'>
                             <thead>
                                 <tr>
-                                    <th>Image</th>
-                                    <th>Title</th>
-                                    <th>Category</th>
-                                    <th>Price</th>
-                                    <th>Action</th>
+                                    <th>Hình ảnh</th>
+                                    <th>Sản phẩm</th>
+                                    <th>Loại</th>
+                                    <th>Giá</th>
+                                    <th>Trạng thái</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {loading ? (<h4 className='py-5 text-center fw-bold'>Loading.....</h4>) : (
+                                {loading ? (<h4 className='py-5 text-center fw-bold'>Đang tải.....</h4>) : (
                                     productsData.map(item =>(
                                         <tr key={item.id}>
                                             <td>

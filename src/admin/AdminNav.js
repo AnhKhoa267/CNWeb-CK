@@ -35,11 +35,11 @@ const AdminNav = () => {
                     <Container>
                         <div className='admin__nav-wrapper-top'>
                             <div className='logo'>
-                                <h2>WinX</h2>
+                                <h2>WinX Admin</h2>
                             </div>
 
-                            <div className='search__box'>
-                                <input type="text" placeholder='Search.....' />
+                            <div className='search__box1'>
+                                <input type="text" placeholder='Tìm kiếm.....' />
                                 <span><i className='ri-search-line'></i></span>
                             </div>
 

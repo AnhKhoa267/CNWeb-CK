@@ -12,7 +12,6 @@ import products from '../assets/data/products';
 import counterImg from '../assets/images/counter-timer-img.png';
 import Clock from '../components/UI/Clock';
 
-
 const Home = () => {
   const [bestSeller, setbestSeller] = useState([]);
   const [trendingProducts, setTrendingProducts] = useState([]);
